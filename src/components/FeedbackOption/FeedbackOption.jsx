@@ -4,7 +4,7 @@ import {getRandomColor} from '../../utils/random-color/random-color';
 import { nanoid } from 'nanoid';
 
 
-export const ButtonContainer = ({changeOnClick, option}) => {
+export const ButtonContainer = ({option, changeOnClick}) => {
     return (
         <ButtonContainerStyle>
             {option.map(feedback => (
