@@ -7,7 +7,7 @@ import { nanoid } from 'nanoid';
 export const ButtonContainer = ({option, changeOnClick}) => {
     return (
         <ButtonContainerStyle>
-            {option.map(feedback => (
+            {Object.keys(option).map(feedback => (
                 <button className="button"
                 type="button"
                 key={nanoid()}  
@@ -22,5 +22,7 @@ export const ButtonContainer = ({option, changeOnClick}) => {
 
 ButtonContainer.propTypes ={
     changeOnCklick: PropTypes.func,
-    option: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,        
+    option: PropTypes.shape(
+        PropTypes.string.isRequired
+    ).isRequired,        
 };

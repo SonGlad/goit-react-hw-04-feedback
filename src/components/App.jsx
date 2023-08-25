@@ -1,11 +1,11 @@
 // import {Component} from 'react';
+// import { feedbacks } from './Utils/Feedback';
 import {Container} from './Container/Container';
 import {Section} from './Section/Section';
 import {ButtonContainer} from './FeedbackOption/FeedbackOption';
 import {Statistics} from './Statistics/Statistics';
 import { Notification } from './Notification/Notification';
 import { useState } from 'react';
-import { feedbacks } from './Utils/Feedback';
 
 
 
@@ -51,13 +51,13 @@ export const App = () => {
     }
   };
 
-  
+
 
   return(
     <Container>
       <Section title={'Please leave your feedback'}>
         <ButtonContainer
-        option={Object.keys(feedbacks)} 
+        option={feedback} 
         changeOnClick={changeOnClick}/>
       </Section>
       <Section title="Statistics"> 
